@@ -6,7 +6,7 @@ import base64
 
 
 
-doc_path = "/Users/haridev/dev/Robotics_Agreement.pdf"
+doc_path = "pdf/LVUSD_Robotics_Agreement.pdf"
 
 # st.info("Hey there! I'm LabChat, your personal AI assistant to help you throughout your journey in Mrs. Servin's Robotics Lab. Ask me anything!")
 
