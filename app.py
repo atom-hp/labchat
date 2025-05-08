@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import streamlit as st
 import os
 import google.generativeai as ggi
@@ -16,9 +15,9 @@ with open(doc_path, "rb") as doc_file:
     doc_data = base64.standard_b64encode(doc_file.read()).decode("utf-8")
 
 
-load_dotenv(".env")
 
-fetched_api_key = os.getenv("API_Key")
+
+fetched_api_key = st.secrets["API_Key"]
 ggi.configure(api_key = fetched_api_key)
 
 #2.0 Flash with Thinking is my preffered model for this use case
