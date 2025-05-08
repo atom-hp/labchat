@@ -24,7 +24,14 @@ model_name = "gemini-2.0-flash-thinking-exp-01-21"
 
 model = ggi.GenerativeModel(model_name)
 
-
+example_visible = True
+if example_visible:
+    st.sidebar.subheader("Example Questions")
+    st.sidebar.write("1. What is the purpose of this document?")
+    st.sidebar.write("2. What are the rules for using the robotics lab?")
+    st.sidebar.write("3. How do I get help if I have questions?")
+    st.sidebar.write("4. What should I do in case of an emergency?")
+    st.sidebar.write("5. Can you summarize the main points of this document?")
 
 st.title("LabChat")
 result = None
@@ -50,6 +57,7 @@ def LLM_Response(question):
         error = False
         st.session_state.api_call_history.append(track_api_call(question, response, temperature))
         st.success("Request Processed")
+        example_visible = False
         return response
     except Exception as e:
         error = True
