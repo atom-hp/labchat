@@ -1,5 +1,4 @@
 import streamlit as st
-import os
 import google.generativeai as ggi
 from datetime import datetime
 import base64
